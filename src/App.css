@@ -1,0 +1,47 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#inputForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#inputForm > label > input {
+  width: 300px;
+  padding: 8px 4px;
+}
+
+#inputForm > input {
+  width: 100px;
+  margin: 12px auto;
+}
+
+.btn {
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.btn:hover {
+  border-color: yellowgreen;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto yellowgreen;
+}
+
+thead td {
+  font-weight: 600;
+  background-color: rgba(154, 205, 50, .2);
+}
