@@ -45,6 +45,7 @@ function App() {
       isCompleted: false
     }
     setTodos(todo => [...todo, newTodo])
+    setTitleInput('')
   }
 
   return (
