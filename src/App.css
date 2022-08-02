@@ -8,6 +8,8 @@
 #inputForm {
   display: flex;
   flex-direction: column;
+  background-color: rgba(154, 205, 50, .1);
+  padding: 20px 0;
 }
 
 #inputForm > label > input {
@@ -16,8 +18,8 @@
 }
 
 #inputForm > input {
-  width: 100px;
-  margin: 12px auto;
+  width: 150px;
+  margin: 16px auto 0;
 }
 
 .btn {
