@@ -65,9 +65,8 @@ const App: FC = () => {
           </tr>
         </thead>
         <tbody>
-          {todos.map( (t, i) => {
+          { todos.length <= 0 ? "データなし" : todos.map( (t, i) => {
             return (
-
               <tr key={i}>
               <td className= {t.isCompleted ? "checked" : ''}>{t.id}</td>
               <td className= {t.isCompleted ? "checked" : ''}>{t.title}</td>
