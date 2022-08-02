@@ -1,31 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import {Todo} from './Tyeps'
 import { v4 as uuidv4 } from 'uuid';
 // import FormInput from './components/FormInput';
 // import FormList from './components/FormList';
 import "./App.css";
 
-function App() {
+const App: FC = () => {
 
-  const InitialTodos: Todo[] = [
-    {
-      id: uuidv4(),
-      title: 'Title A',
-      isCompleted: false
-    },
-    {
-      id: uuidv4(),
-      title: 'Title B',
-      isCompleted: false
-    },
-    {
-      id: uuidv4(),
-      title: 'Title C',
-      isCompleted: true
-    }
-
-    
-  ];
+  // const InitialTodos: Todo[] = [
+  //   {
+  //     id: uuidv4(),
+  //     title: 'Title A',
+  //     isCompleted: false
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     title: 'Title B',
+  //     isCompleted: false
+  //   }
+  // ];
+  const InitialTodos: Todo[] = [];
 
   const [todos, setTodos] = useState(InitialTodos);
   const [titleInput, setTitleInput] = useState('');
@@ -39,13 +33,15 @@ function App() {
   }
 
   const handleOnSubmit = () => {
-    const newTodo : Todo = {
-      id: uuidv4(),
-      title: titleInput,
-      isCompleted: false
+    if (titleInput) {
+      const newTodo : Todo = {
+        id: uuidv4(),
+        title: titleInput,
+        isCompleted: false
+      }
+      setTodos(todo => [...todo, newTodo])
+      setTitleInput('')
     }
-    setTodos(todo => [...todo, newTodo])
-    setTitleInput('')
   }
 
   return (
